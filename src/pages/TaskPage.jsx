@@ -9,7 +9,7 @@ function TaskPage() {
   const description = searchParams.get("description");
   return (
     <div className="h-screen bg-slate-600 p-6">
-      <div className="w-[500px] mx-auto space-y-4">
+      <div className="max-w-[500px] mx-auto space-y-4">
         <div className="flex justify-center relative">
           <button
             onClick={() => navigate(-1)}
@@ -20,9 +20,11 @@ function TaskPage() {
           <Title>Detalhes da Tarefa</Title>
         </div>
 
-        <div className="bg-slate-200 p-4 rounded-md space-y-2">
-          <h2 className="text-xl text-slate-700 font-bold">{title}</h2>
-          <p className="text-slate-700">{description}</p>
+        <div className="bg-slate-200 p-4 rounded-md space-y-2 w-full">
+          <h2 className="text-xl text-slate-700 font-bold break-words">
+            {title}
+          </h2>
+          <p className="text-slate-700 break-words">{description}</p>
         </div>
       </div>
     </div>
